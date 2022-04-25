@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIS - Swimmer Improvment System</title>
+    <link rel="icon" href="images/SIS -New Icon BG.png" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> 
+  <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/86ff520255.js" crossorigin="anonymous"></script>
+    <!--My CSS-->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="container-fluid">
+                <i class="fas fa-bars" id="Navigation" aria-hidden="true"></i>
+                <div class="SideNav" id="SideNav">
+                    <i class="far fa-times-circle" id="exitNav"></i>
+                    <ul>
+                        <ol class="categories" href="">
+                            <div class="personImg">
+                                <img src="images/20ss-suit-xihead.jpg" alt="" />
+                            </div>
+                            <!-- /personImg -->
+                        </ol>
+                        <div class="navLine"></div>
+                        <li class="categories">
+                            <div class="categoryBox">
+                                <span class="material-icons">start</span>
+                                <a href="#">Start Training</a>
+                            </div>
+                            <!-- /categoryBox -->
+                        </li>
+                        <li class="categories">
+                            <div class="categoryBox">
+                                <span class="material-icons">history</span>
+                                <a href="#">History</a>
+                            </div>
+                            <!-- /categoryBox -->
+                        </li>
+                        <li class="categories">
+                            <div class="categoryBox">
+                                <span class="material-icons">emoji_events</span>
+                                <a href="#">Goals</a>
+                            </div>
+                            <!-- /categoryBox -->
+                        </li>
+                        <li class="categories">
+                            <div class="categoryBox">
+                                <span class="material-icons">compare_arrows</span>
+                                <a href="#">Compare</a>
+                            </div>
+                            <!-- /categoryBox -->
+                        </li>
+                        <li class="categories">
+                            <div class="categoryBox">
+                                <span class="material-icons">star_rate</span>
+                                <a href="#">Achievements</a>
+                            </div>
+                            <!-- /categoryBox -->
+                        </li>
+                        <li class="categories">
+                            <div class="categoryBox">
+                                <span class="material-icons">lightbulb_outline</span>
+                                <a href="#">Tips</a>
+                            </div>
+                            <!-- /categoryBox -->
+                        </li>
+                        <div class="navLine" id="underLine"></div>
+                        <li class="categories">
+                            <div class="categoryBox">
+                                <span class="material-icons">account_circle</span>
+                                <a href="#">Account</a>
+                            </div>
+                            <!-- /categoryBox -->
+                        </li>
+                        <li class="categories">
+                            <div class="categoryBox">
+                                <span class="material-icons">settings</span>
+                                <a href="#">Settings</a>
+                            </div>
+                            <!-- /categoryBox -->
+                        </li>
+                        <li class="categories">
+                            <div class="categoryBox">
+                                <span class="material-icons">logout</span>
+                                <a href="#">Log out</a>
+                            </div>
+                            <!-- /categoryBox -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /SideNav -->
+            </div>
+            <!-- /container-fluid -->
+        </div>
+        <!-- /navbar -->
+        <div class="sensor">
+            <span class="material-icons" id="sensors">sensors</span>
+        </div>
+        <!-- /sensor -->
+        <div class="personLogoLogIn">
+            <img src="images/20ss-suit-xihead.jpg" width="50px" style="border-radius: 50%;" alt="" />
+        </div>
+        <!-- /personLogoLogIn -->
+    </header>
+    <section class="search-and-logoSwimmerPage">
+        <div class="backAndEditLogo">
+            <span class="material-icons" id="arrow_back">
+                <a href="index.html">
+                    arrow_back
+                </a>
+            </span>
+            <span class="material-icons" id="editSwimmer">
+                edit
+            </span>
+        </div>
+        <div>
+            <a href="index.html">
+                <img id="imgSwimLogo" src="images/SIS -New Icon BG.png"/></a>
+        </div>
+        <div class="deleteAndSettingLogo">
+            <span class="material-icons" id="delete_outline">
+                delete_outline
+            </span>
+            <span class="material-icons" id="settingsSwimmer">
+                settings
+            </span>
+        </div>
+    </section>
+    <section class="SwimmerDetails">
+        <div class="swimmerNameTitle">
+            <h2>Roey</h2>
+        </div>
+        <div class="swimmerDescriptions">
+            <div id="LeftDesc">
+                <h6>Age: 27</h6>
+                <h6>Status: Professional</h6>
+                <h6>Weight: 79Kg</h6>
+                <h6>Height: 1.86M</h6>
+            </div>
+            <div id="rightDesc">
+                <h6>City: Petah Tikva</h6>
+                <h6>Gender: Male</h6>
+                <h6>Weekly amount of training: 5</h6>
+            </div>
+        </div>
+    </section>
+    <section class="cards">
+        <div class="cardElment">
+            <div class="card text-black">
+                  <h5 class="card-title">Last Training Details:</h5>
+                  <p class="card-text">Backstroke: 298<br>
+                    Breaststroke: 372<br>
+                    Butterfly: 409<br>
+                    Crawl (or freestyle): 409<br>
+                    Vigorous swimming: 372<br>
+                    Treading water vigorously: 372</p>
+              </div>
+              <div class="card text-black">
+                  <h5 class="card-title">Last training dates:</h5>
+                  <p class="card-text">Training&emsp;&emsp;duration</p>
+                  <p class="card-text">18/4/22&emsp;&emsp;45:36:02<br>
+                    20/4/22&emsp;&emsp;45:36:02<br>
+                    23/4/22&emsp;&emsp;45:36:02<br>
+                    26/4/22&emsp;&emsp;45:36:02<br>
+                </p>
+              </div>
+              <div class="card text-black">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">.</p>
+                  <p class="card-text">Last updated 3 mins ago</p>
+              </div>
+              <div class="card text-black">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">.</p>
+                  <p class="card-text">Last updated 3 mins ago</p>
+              </div>
+        </div>
+    </section>
+    <footer>
+        <section class="footerBtn">
+          <div class="history">
+            <span class="material-icons" id="history">
+              history
+            </span>
+            <h6>History</h6>
+          </div>
+          <div class="tungsten">
+            <span class="material-icons" id="tungsten">
+              tungsten
+            </span>
+            <h6>Tips</h6>
+          </div>
+          <div class="compare">
+            <span class="material-icons" id="compare">
+              compare
+            </span>
+            <h6>Compare</h6>
+          </div>
+        </section>
+      </footer>
+</body>
+<script src="JavaScript/script.js"></script>
+
+</html>
