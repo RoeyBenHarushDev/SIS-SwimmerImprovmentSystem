@@ -7,6 +7,18 @@ if (SideNav) {
 function openNavBar(e) {
   SideNav.classList.toggle("active");
 }
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("header");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
 
 function check(form) {
   if (form.usrnm.value == "Yonit" && form.psw.value == "yonit123") {
@@ -38,48 +50,48 @@ function Search() {
 }
 
 let Swimmers = [
-  {
-    name: "Adele",
-    age: 24,
-    city: "Haifa",
-    status: "Beginner",
-    accomplishments: "none"
-  },
-  {
-    name: "Agnes",
-    age: 18,
-    city: "Tel-Aviv",
-    status: "Beginner",
-    accomplishments: "none"
-  },
-  {
-    name: "Billy",
-    age: 26,
-    city: "Petah Tikva",
-    status: "professional",
-    accomplishments: "Golden medal"
-  },
-  {
-    name: "Bob",
-    age: 23,
-    city: "Ashdod",
-    status: "advanced",
-    accomplishments: "National medal"
-  },
-  {
-    name: "Calvin",
-    age: 20,
-    city: "Haifa",
-    status: "Beginner",
-    accomplishments: "none"
-  },
-  {
-    name: "Christina",
-    age: 20,
-    city: "Nesher",
-    status: "Beginner",
-    accomplishments: "none"
-  },
+  // {
+  //   name: "Adele",
+  //   age: 24,
+  //   city: "Haifa",
+  //   status: "Beginner",
+  //   accomplishments: "none"
+  // },
+  // {
+  //   name: "Agnes",
+  //   age: 18,
+  //   city: "Tel-Aviv",
+  //   status: "Beginner",
+  //   accomplishments: "none"
+  // },
+  // {
+  //   name: "Billy",
+  //   age: 26,
+  //   city: "Petah Tikva",
+  //   status: "professional",
+  //   accomplishments: "Golden medal"
+  // },
+  // {
+  //   name: "Bob",
+  //   age: 23,
+  //   city: "Ashdod",
+  //   status: "advanced",
+  //   accomplishments: "National medal"
+  // },
+  // {
+  //   name: "Calvin",
+  //   age: 20,
+  //   city: "Haifa",
+  //   status: "Beginner",
+  //   accomplishments: "none"
+  // },
+  // {
+  //   name: "Christina",
+  //   age: 20,
+  //   city: "Nesher",
+  //   status: "Beginner",
+  //   accomplishments: "none"
+  // },
 ];
 
 
@@ -115,56 +127,28 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('AddSwimmer').addEventListener('click', add);
 })
 
-// document.addEventListener('DOMContentLoaded', () => {
-  //   document.getElementById('Delete').addEventListener('click', deleteItem);
-  // });
-  
-  let list = document.getElementById("myUL");
-  let data = JSON.parse(localStorage.getItem('MySwimmerList'));
-  data.map((item ,index) => {
-    let li;
-    // let a = document.createElement("a");
-    // let h6 = document.createElement("h6");
-    li = `<li class="liObject" data-item=${index}><span data-item=${index} class='Delete' id='Delete'>Delete</span><a href="swimmer.html"
-    <h6 data-item=${index} class='Description'>` + item.name + `Status: ` + item.status + ` Age: ` + item.age + `</h6><a></li>`;
-    // h6 = `<h6 data-item=${index} class='Description'>Status: ` + item.status + ` Age: ` + item.age + `</h6>`;
-    // li.innerHTML = item.name;
-    // li = <li data-item={index}></li>
-    // a.innerHTML = item.name + h6;
-    // li.className = "liObject";
-    // li.innerHTML = `<span data-item=${index} class='Delete' id='Delete'>Delete</span>` + "  " + a;
-    // a.href = "swimmer.html";
-    // li.appendChild(a);
-    list.innerHTML = li;
-  })
-  const deleteItem = (event)=>{
-    let allLiObject = document.querySelectorAll(".liObject");
-    
-    let newArr = [];
-    // let data = JSON.parse(localStorage.getItem('MySwimmerList'));
-    
-    for (let index = 0; index < allLiObject.length; index++) {
-      console.log("event",event.target.dataset.item);
-      console.log("li",allLiObject[index].dataset.item);
-      if(allLiObject[index].dataset.item != event.target.dataset.item){
-        newArr.push(allLiObject[index]);
-      }
-      
-    }
-    // newArr = allLiObject.filter(li => li.dataset != event.target.dataset)
-  
-      localStorage.setItem('MySwimmerList', JSON.stringify(newArr));
-      window.location.reload();
-  }
-  
-  
-let deletearr = document.querySelectorAll(".Delete")
 
-for (let i = 0; i < deletearr.length; i++) {
-  
-  deletearr[i].addEventListener("click", deleteItem);
+let list = document.getElementById("myUL");
+let data = JSON.parse(localStorage.getItem('MySwimmerList'));
+if (data) {
+  // Object.keys(data).map
+  data.map((item) => {
+    let li = document.createElement("li");
+    let a = document.createElement("a");
+    let h6 = document.createElement("h6");
+    h6 = "<h6 class='Description'>Status: " + item.status + " Age: " + item.age + "</h6>";
+    li.innerHTML = item.name;
+    a.innerHTML = item.name + h6;
+    li.className = "liObject";
+    li.innerHTML = "<span class='Delete' id='Delete'>Delete</span>" + "  " + a;
+    a.href = "swimmer.html";
+    li.appendChild(a);
+    list.appendChild(li);
+  })
 }
 
+
+let allLiObject = document.querySelectorAll(".liObject");
 // let del = document.querySelector(".Delete");
 // del.addEventListener("click", function (event) {
 //   let newArr = [];
@@ -180,7 +164,18 @@ for (let i = 0; i < deletearr.length; i++) {
 //       // localStorage.setItem('MySwimmerList', JSON.stringify(allLiObject));
 //     })
 
+for (let index = 0; index < allLiObject.length; index++) {
+  allLiObject[index].addEventListener("click", function () {
+    this.classList.toggle("active");
+  });
+  for (let index = 0; index < allLiObject.length; index++) {
+    allLiObject[index].querySelector(".Delete").addEventListener("click", function () {
+      allLiObject[index].remove();
+      localStorage.setItem('MySwimmerList', JSON.stringify(allLiObject));
+    });
 
+  }
+}
 
 
 function HideDeleteBtn() {
@@ -202,11 +197,26 @@ function closeForm() {
 }
 
 
-// let Place = document.querySelector(".swimmerNameTitle");
-// if (data) {
-//   data.map((item) => {
-//     let h2 = document.createElement("h2");
-//     h2.innerHTML = item.name;
-//     Place.appendChild(h2);
-//   })
-// }
+let Place = document.querySelector(".swimmerNameTitle");
+if (data) {
+  data.map((item) => {
+    let h2 = document.createElement("h2");
+    h2.innerHTML = item.name;
+    Place.appendChild(h2);
+  })
+}
+
+$(document).ready(function(){
+  
+  $(".input").focus(function(){
+    
+    $(this).parent().addClass("focus");
+  }).blur(function(){
+    
+    if($(this).val() === ""){
+      $(this).parent().removeClass("focus");
+      
+    }
+    
+  });
+});

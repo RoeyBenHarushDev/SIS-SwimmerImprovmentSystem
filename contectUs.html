@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/86ff520255.js" crossorigin="anonymous"></script>
@@ -119,85 +121,70 @@
             <img src="images/20ss-suit-xihead.jpg" width="50px" style="border-radius: 50%;" alt="" />
         </div>
         <!-- /personLogoLogIn -->
-    </header>
-    <section class="search-and-logoSwimmerPage">
-        <div class="backAndEditLogo">
-            <span class="material-icons" id="arrow_back">
-                <a href="index.html">
-                    arrow_back
-                </a>
-            </span>
-            <span class="material-icons" id="editSwimmer">
-                edit
-            </span>
-        </div>
-        <div>
-            <a href="index.html">
-                <img id="imgSwimLogo" src="images/SIS -New Icon BG.png"/></a>
-        </div>
-        <div class="deleteAndSettingLogo">
-            <span class="material-icons" id="delete_outline">
-                delete_outline
-            </span>
-            <span class="material-icons" id="settingsSwimmer">
-                settings
-            </span>
-        </div>
-    </section>
-    <section class="SwimmerDetails">
-        <div class="swimmerNameTitle">
-            <h2>Roey</h2>
-        </div>
-        <div class="swimmerDescriptions">
-            <div id="LeftDesc">
-                <h6>Age: 27</h6>
-                <h6>Status: Professional</h6>
-                <h6>Weight: 79Kg</h6>
-                <h6>Height: 1.86M</h6>
-            </div>
-            <div id="rightDesc">
-                <h6>City: Petah Tikva</h6>
-                <h6>Gender: Male</h6>
-                <h6>Weekly amount of training: 5</h6>
-            </div>
-        </div>
-    </section>
-    <section class="cards">
-        <div class="cardElment">
-            <div class="card text-black">
-                  <h5 class="card-title">Last Training Details:</h5>
-                  <p class="card-text">Backstroke: 298<br>
-                    Breaststroke: 372<br>
-                    Butterfly: 409<br>
-                    Crawl (or freestyle): 409<br>
-                    Vigorous swimming: 372<br>
-                    Treading water vigorously: 372</p>
+    </header> 
+    <div class="container-fluid">
+        <div class="container">
+          <div class="formBox">
+            <form action="">
+              <div class="row">
+                <div class="col-xs-12">
+                  <h2>Contect us</h2>
+                </div>
+      
+                <div class="row">
+                  <div class="col-xs-6">
+                    <div class="inputBox">
+                      <div class="inputText"></div>
+                      <input type="text" class="input" placeholder="Name">
+                    </div>
+                  </div>
+      
+      
+                  <div class="col-xs-6">
+                    <div class="inputBox">
+                      <div class="inputText"></div>
+                      <input type="text" class="input" placeholder="Last Name">
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="row">
+                  <div class="col-xs-6">
+                    <div class="inputBox">
+                      <div class="inputText"></div>
+                      <input type="text" class="input" placeholder="Email">
+                    </div>
+                  </div>
+      
+                  <div class="col-xs-6">
+                    <div class="inputBox">
+                      <div class="inputText"></div>
+                      <input type="phone" class="input" placeholder="Phone">
+                    </div>
+                  </div>
+      
+                </div>
+      
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="inputBox">
+                      <div class="inputText"></div>
+                      <textarea cols="3" rows="3" class="input" placeholder="Message"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <input type="submit" class="button">
+                  </div>
+                </div>
               </div>
-              <div class="card text-black">
-                  <h5 class="card-title">Last training dates:</h5>
-                  <p class="card-text">Training&emsp;&emsp;duration</p>
-                  <p class="card-text">18/4/22&emsp;&emsp;45:36:02<br>
-                    20/4/22&emsp;&emsp;45:36:02<br>
-                    23/4/22&emsp;&emsp;45:36:02<br>
-                    26/4/22&emsp;&emsp;45:36:02<br>
-                </p>
-              </div>
-              <div class="card text-black">
-                  <h5 class="card-title">What is Lorem Ipsum?</h5>
-                  <p class="card-text"> Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-              </div>
-              <div class="card text-black">
-                  <h5 class="card-title">Where does it come from?</h5>
-                  <p class="card-text">.</p>
-                  <p class="card-text">Last updated 3 mins ago</p>
-              </div>
+          </div>
+          </form>
         </div>
-    </section>
-    <div class="Training">
-        <button type="button" class="btn btn-primary">Start Training</button>
-        <button type="button" class="btn btn-info">Connect To Sensor</button>
-    </div>
-    <footer>
+      </div>
+      </div>
+       <footer>
         <section class="footerBtn">
           <div class="history">
             <span class="material-icons" id="history">
